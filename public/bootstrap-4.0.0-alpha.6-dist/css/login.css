@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper-login {
+    margin: 10% 30%;
+    padding: 10px;
+    height: 290px;
+    width: 300px;
+    background: #92ca5c;
+    box-shadow: 15px 15px 5px #000;
+}
+
+.wrapper-login  h3 {
+    text-align: center;
+    text-shadow: 5px 5px 5px #fff;
+}
+
+.wrapper-login .login-body {
+    margin: 0 10px;
+}
+
+.wrapper-login button {
+    margin: 0 10px;
+    width: 260px;
+    font-weight: bold;
+}
+
+.
+
+
+

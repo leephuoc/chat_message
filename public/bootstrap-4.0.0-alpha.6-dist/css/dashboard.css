@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+.wrapper-dashboard {
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+.header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #92ca5c;
+    /*box-shadow: 15px 15px 5px #000;*/
+}
+
+.header h1 {
+    margin-left: 20px;
+}
+
+.header h1 a {
+    font-size: 20px;
+}
+
+.header .navigation-account {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+    line-height: 100%;
+    float: right;
+}
+
+.header .navigation-account li {
+    margin: 0;
+    padding: 14px 20px;
+    float: left;
+}
+
+.header .navigation-account li a {
+    text-decoration: none;
+}
+
+.header .navigation-account li a:hover {
+    text-decoration: none;
+}
+
+/* START CONTENT */
+.content {
+    margin: 0;
+    padding: 0;
+}
+
+/* START SIDEBAR */
+.content .sidebar {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    min-height: 700px;
+}
+
+.content .sidebar .introduction-account {
+    margin: 0 25px;
+    padding: 0;
+    box-shadow: 5px 5px 5px #fff;
+    border-radius: 20px;
+}
+
+.content .sidebar .introduction-account img {
+    margin-top: 10px;
+}
+
+.content .sidebar .menu-main {
+    margin: 0;
+    padding: 0;
+}
+
+.content .sidebar .menu-main ul.parent-menu {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.content .sidebar .menu-main ul.parent-menu .home {
+    border-top:1px solid #fff;
+}
+
+.content .sidebar .menu-main ul.parent-menu li.treeview {
+    margin: 0;
+    padding: 10px 0 10px;
+    border-bottom: 1px solid #fff;
+    position: relative;
+}
+
+.content .sidebar .menu-main ul.parent-menu li.treeview a {
+    margin-left: 10px;
+}
+
+.content .sidebar .menu-main ul.parent-menu li.treeview ul.sub-menu {
+    border-bottom: none;
+}
+
+.content .sidebar .menu-main ul.parent-menu li.treeview ul.sub-menu li {
+    padding: 10px 5px;
+    border-bottom: 1px solid #fff;
+}
+
+.content .sidebar .menu-main ul.parent-menu li.treeview ul.sub-menu li:first-child {
+    margin-top: 10px;
+    border-top: 1px solid #fff;
+}
+
+.content .sidebar .menu-main ul.parent-menu li.treeview ul.sub-menu li:last-child {
+    margin-bottom: -10px;
+    border-bottom: none;
+}
+
+.content .main {
+    margin: 0;
+    padding: 0;
+}
+
+.content .main .chat {
+    margin: 0;
+    padding: 0;
+}
+

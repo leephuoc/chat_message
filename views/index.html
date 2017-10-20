@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="chat" style="display: none">
+        <div class="content-chat"></div>
+        <div class="form-chat">
+            <input type="hidden" name="username" value="'+ data.username +'"/>
+            <input type="text" name="content" id="content" value=""/>
+            <button type="button" class="btn btn-success" onclick="setContent()">OK</button>
+        </div>
+    </div>
+    <div id="wrapper-chat">
+        <div class="form-group">
+            <label for="">Username</label>
+            <input type="text" name="username" class="form-control" id="username" placeholder="Input username">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="setUsername()">OK</button>
+        <div id="error" style="color: red"></div>
+    </div>
+
+    <script src="/js/jquery/dist/jquery.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+        var socket = io();
+
+        $('#wrapper-chat').fadeIn();
+
+        function setUsername() {
+            var username = document.getElementById('username').value;
+            socket.emit('setUser', {
+                'username': username
+            });
+        }
+
+        function setContent() {
+            socket.emit('setContentChat', {
+//                username: document.getElementById('username').value,
+                content: document.getElementById('content').value
+            });
+        }
+
+        socket.on('userExist', function(msg_error) {
+            document.getElementById('error').innerHTML = msg_error;
+        });
+
+        socket.on('show', function(data) {
+            $('.chat .form-chat input[name="username"]').attr('value', data.username);
+            $('#wrapper-chat').hide();
+            $('.chat').show();
+
+        });
+
+        socket.on('loadChat', function(data) {
+            console.log(data.contents);
+            html = '';
+            $.each(data.contents, function(i, value) {
+               html +='<p>'+ value +'</p>'
+            });
+            $('.content-chat').html(html);
+        });
+    </script>
+</body>
+</html>

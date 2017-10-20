@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <div class="wrapper-dashboard">
+        <div class="header">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <h1><a href="#">LOGO</a></h1>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <ul class="navigation-account">
+                        <li><a href="">Menu</a></li>
+                        <li><a href="">Menu</a></li>
+                        <li><a href="">Menu</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- End.header-->
+        <div class="content">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="sidebar">
+                        <div class="introduction-account">
+                            <div class="img-large-account">
+                                <!--<img src="/image/apple_ex.png" alt="Not found" width="100" height="100">-->
+                            </div>
+                            <p>Admin</p>
+                        </div><!-- End.introduction-account -->
+                        <div class="menu-main">
+                            <ul class="parent-menu">
+                                <li class="treeview home"><a href="#"><i class="glyphicon glyphicon-home"></i>Menu</a></li>
+                                <li class="treeview">
+                                    <a href="#"><i class="glyphicon glyphicon-home"></i>Menu</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#"><i class=""></i>Sub menu 1</a></li>
+                                        <li><a href="#"><i class=""></i>Sub menu 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="treeview">
+                                    <a href="#"><i class="glyphicon glyphicon-home"></i>Menu</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#"><i class=""></i>Sub menu 1</a></li>
+                                        <li><a href="#"><i class=""></i>Sub menu 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="treeview">
+                                    <a href="#"><i class="glyphicon glyphicon-home"></i>Menu</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#"><i class=""></i>Sub menu 1</a></li>
+                                        <li><a href="#"><i class=""></i>Sub menu 2</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div><!-- End.menu-main-->
+                    </div><!-- End.sidebar -->
+                </div><!-- End.col-md-2 -->
+                <div class="col-md-10">
+                    <div class="main">
+
+                        <div class="chat">
+                            <div class="img-person">
+                                <img src="" alt="">
+                            </div>
+                            <div class="message">
+                                <p>This is message !!</p>
+                                <p>10.20</p>
+                            </div>
+                        </div>
+
+                    </div><!-- End.main -->
+                </div><!-- End.col-md-10 -->
+            </div>
+        </div><!-- End.content -->
+    </div>
+
+    <script src="/js/jquery/dist/jquery.js"></script>
+    <script>
+        $('.sub-menu').hide();
+        $('.treeview').click(function(e) {
+            console.log($(this).children('.treeview'));
+            $(this).children('.sub-menu').slideToggle();
+        });
+    </script>
+</body>
+</html>
