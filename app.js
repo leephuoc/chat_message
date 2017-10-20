@@ -42,38 +42,36 @@ mongoose.connect(url, { useMongoClient: true });
 
 
 
-    /*
-        var client = 0;
-        var roomno = 1;
-        var data_usernames = [];
-        var data_contents = [];
-        io.on('connection', function(socket) {
-            // homepage.controller();
+    var client = 0;
+    var roomno = 1;
+    var data_usernames = [];
+    var data_contents = [];
+    io.on('connection', function(socket) {
+        // homepage.controller();
 
-            // listen event set username
-            socket.on('setUser', function(data) {
-                console.log(data);
-                console.log(data.username);
-                if(data_usernames.indexOf(data.username) > -1) {
-                    // console.log(data_usernames);
-                    socket.emit('userExist', 'This username have person register !');
-                } else {
-                    data_usernames.push(data.username);
-                    socket.emit('show', {username: data.username});
-                }
-            });
-
-            // Listen event set
-            socket.on('setContentChat', function(data) {
-                data_contents.push(data.content);
-                socket.broadcast.emit('loadChat', {contents: data_contents});
-                socket.emit('loadChat', {contents: data_contents});
-
-                console.log(data_contents);
-            });
+        // listen event set username
+        socket.on('setUser', function(data) {
+            console.log(data);
+            console.log(data.username);
+            if(data_usernames.indexOf(data.username) > -1) {
+                // console.log(data_usernames);
+                socket.emit('userExist', 'This username have person register !');
+            } else {
+                data_usernames.push(data.username);
+                socket.emit('show', {username: data.username});
+            }
         });
 
-    */
+        // Listen event set
+        socket.on('setContentChat', function(data) {
+            data_contents.push(data.content);
+            socket.broadcast.emit('loadChat', {contents: data_contents});
+            socket.emit('loadChat', {contents: data_contents});
+
+            console.log(data_contents);
+        });
+    });
+
 
 // Listen server
 http.listen(3000, function() {
